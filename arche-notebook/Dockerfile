@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook:f646d2b2a3af
+FROM jupyter/minimal-notebook
 
 
 # Arche dependencies 
