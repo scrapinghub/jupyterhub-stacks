@@ -1,7 +1,8 @@
-# jupyterhub-stacks
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manycoding/jupyterhub-stacks/master)
+
+# JupyterHub Stacks
 
 JupyterHub Stacks are a set of ready-to-run Docker images containing Jupyter applications, meant to be used as environments in cluster set with [Zero to JupyterHub with Kubernetes](https://z2jh.jupyter.org)
-
 
 ## Creating an image
 

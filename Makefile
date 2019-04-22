@@ -18,4 +18,4 @@ build/%: ## build the latest image for a stack
 build-test-all: $(foreach I,$(ALL_IMAGES),build/$(I) test/$(I) ) ## build and test all stacks
 
 test/%: ## run tests against a stack
-	@TEST_IMAGE="$(OWNER)/$(notdir $@)" pytest test
+	@TEST_IMAGE="$(OWNER)/$(notdir $@)" pytest tests
