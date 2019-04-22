@@ -1,4 +1,7 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manycoding/jupyterhub-stacks/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manycoding/arche-notebook/master)
+[![Build Status](https://travis-ci.org/manycoding/jupyterhub-stacks.svg?branch=master)](https://travis-ci.com/manycoding/jupyterhub-stacks)
+[![DockerHub](https://images.microbadger.com/badges/version/manycoding/arche-notebook.svg)](https://microbadger.com/images/manycoding/arche-notebook "Recent tag/version of manycoding/arche-notebook")
+
 
 # JupyterHub Stacks
 
