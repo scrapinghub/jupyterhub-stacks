@@ -24,6 +24,7 @@ RUN pip install -U --no-cache-dir \
     nbgitpuller && \
     conda install --quiet --yes \
     awscli \
+    s3fs \
     nb_conda_kernels && \
     conda clean -tipsy && \
     echo "envs_dirs:\n  - /home/jovyan/my-conda-envs/" > ~/.condarc && \
