@@ -1,5 +1,5 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scrapinghub/arche-notebook/master)
-[![Build Status](https://travis-ci.org/scrapinghub/jupyterhub-stacks.svg?branch=master)](https://travis-ci.com/scrapinghub/jupyterhub-stacks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scrapinghub/jupyterhub-stacks/master?filepath=arche-notebook)
+[![Build Status](https://travis-ci.org/scrapinghub/jupyterhub-stacks.svg?branch=master)](https://travis-ci.org/scrapinghub/jupyterhub-stacks)
 [![DockerHub](https://images.microbadger.com/badges/version/scrapinghub/arche-notebook.svg)](https://microbadger.com/images/scrapinghub/arche-notebook "Recent tag/version of scrapinghub/arche-notebook")
 
 
