@@ -27,7 +27,7 @@ def docker_client():
 @pytest.fixture(scope='session')
 def image_name():
     """Image name to test"""
-    return os.getenv('TEST_IMAGE', 'manycoding/arche-notebook')
+    return os.getenv('TEST_IMAGE', 'scrapinghub/arche-notebook')
 
 
 class TrackedContainer(object):

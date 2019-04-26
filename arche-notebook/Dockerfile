@@ -1,5 +1,16 @@
 FROM jupyter/minimal-notebook
 
+# Additional tools
+RUN pip install -U --no-cache-dir \
+    nbgitpuller \
+    cufflinks && \
+    conda install --quiet --yes \
+    awscli \
+    s3fs \
+    nb_conda_kernels && \
+    conda clean -tipsy && \
+    echo "envs_dirs:\n  - /home/jovyan/my-conda-envs/" > ~/.condarc && \
+    jupyter serverextension enable --py nbgitpuller --sys-prefix
 
 # Arche dependencies 
 RUN pip install -U --no-cache-dir arche==0.3.2 && \
@@ -18,14 +29,3 @@ RUN jupyter nbextension enable --section=tree tree-filter/index && \
     jupyter nbextension enable toc2/main && \
     jupyter nbextension enable hide_input/main && \
     jupyter nbextension enable collapsible_headings/main
-
-# Additional tools
-RUN pip install -U --no-cache-dir \
-    nbgitpuller && \
-    conda install --quiet --yes \
-    awscli \
-    s3fs \
-    nb_conda_kernels && \
-    conda clean -tipsy && \
-    echo "envs_dirs:\n  - /home/jovyan/my-conda-envs/" > ~/.condarc && \
-    jupyter serverextension enable --py nbgitpuller --sys-prefix

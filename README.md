@@ -1,6 +1,6 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manycoding/arche-notebook/master)
-[![Build Status](https://travis-ci.org/manycoding/jupyterhub-stacks.svg?branch=master)](https://travis-ci.com/manycoding/jupyterhub-stacks)
-[![DockerHub](https://images.microbadger.com/badges/version/manycoding/arche-notebook.svg)](https://microbadger.com/images/manycoding/arche-notebook "Recent tag/version of manycoding/arche-notebook")
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scrapinghub/arche-notebook/master)
+[![Build Status](https://travis-ci.org/scrapinghub/jupyterhub-stacks.svg?branch=master)](https://travis-ci.com/scrapinghub/jupyterhub-stacks)
+[![DockerHub](https://images.microbadger.com/badges/version/scrapinghub/arche-notebook.svg)](https://microbadger.com/images/scrapinghub/arche-notebook "Recent tag/version of scrapinghub/arche-notebook")
 
 
 # JupyterHub Stacks

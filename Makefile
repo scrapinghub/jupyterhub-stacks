@@ -2,7 +2,7 @@
 
 # Shell that make should use
 SHELL:=bash
-OWNER:=manycoding
+OWNER:=scrapinghub
 
 ALL_STACKS:=arche-notebook
 ALL_IMAGES:=$(ALL_STACKS)
