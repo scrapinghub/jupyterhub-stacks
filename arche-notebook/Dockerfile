@@ -13,11 +13,11 @@ RUN pip install -U --no-cache-dir \
     jupyter serverextension enable --py nbgitpuller --sys-prefix
 
 # Arche dependencies 
-RUN pip install -U --no-cache-dir arche==0.3.2 && \
+RUN pip install -U --no-cache-dir arche==0.3.3 && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --no-build && \
-    jupyter labextension install plotlywidget@0.9.0 --no-build && \
+    jupyter labextension install plotlywidget@0.9.1 --no-build && \
     jupyter labextension install @jupyterlab/plotly-extension@0.18.2 --no-build && \
     jupyter lab build
 
