@@ -4,9 +4,11 @@ FROM jupyter/minimal-notebook
 RUN pip install -U --no-cache-dir \
     nbgitpuller \
     cufflinks && \
-    conda install --quiet --yes \
+    conda install --quiet --yes -c conda-forge \
+    matplotlib \
     awscli \
     s3fs \
+    gcsfs \
     pyarrow \
     nb_conda_kernels && \
     conda clean -tipsy && \
@@ -14,7 +16,7 @@ RUN pip install -U --no-cache-dir \
     jupyter serverextension enable --py nbgitpuller --sys-prefix
 
 # Arche dependencies 
-RUN pip install -U --no-cache-dir arche==0.3.5 && \
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --no-build && \
