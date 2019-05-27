@@ -10,6 +10,7 @@ RUN pip install -U --no-cache-dir \
     s3fs \
     gcsfs \
     pyarrow \
+    memory_profiler \
     nb_conda_kernels && \
     conda clean -tipsy && \
     echo "envs_dirs:\n  - /home/jovyan/my-conda-envs/" > ~/.condarc && \
