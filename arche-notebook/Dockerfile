@@ -17,7 +17,7 @@ RUN pip install -U --no-cache-dir \
     jupyter serverextension enable --py nbgitpuller --sys-prefix
 
 # Arche dependencies 
-RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@0.3.6dev#egg=arche && \
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@fc5cf4106978df6745f98803969727a59bf41d50#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --no-build && \
