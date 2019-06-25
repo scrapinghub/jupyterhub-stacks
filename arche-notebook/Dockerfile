@@ -16,8 +16,9 @@ RUN pip install -U --no-cache-dir \
     echo "envs_dirs:\n  - /home/jovyan/my-conda-envs/" > ~/.condarc && \
     jupyter serverextension enable --py nbgitpuller --sys-prefix
 
-# Arche dependencies 
-RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@fc5cf4106978df6745f98803969727a59bf41d50#egg=arche && \
+# Arche dependencies
+# plotly deps https://github.com/plotly/plotly.py
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@19aceef950faef83c8dd6dad6e7d28d3953e07f6#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38 --no-build && \
