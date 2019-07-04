@@ -8,6 +8,7 @@ RUN pip install -U --no-cache-dir \
     conda install --quiet --yes -c conda-forge \
     ipywidgets==7.4.2 \
     matplotlib \
+    ipympl \
     awscli \
     s3fs \
     gcsfs \
@@ -26,6 +27,7 @@ RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@75b63
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38.1 --no-build && \
     jupyter labextension install plotlywidget@0.11.0 --no-build && \
     jupyter labextension install @jupyterlab/plotly-extension@0.18.2 --no-build && \
+    jupyter labextension install jupyter-matplotlib && \
     jupyter lab build
 
 # Notebook extensions
