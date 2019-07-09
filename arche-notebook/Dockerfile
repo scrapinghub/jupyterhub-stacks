@@ -6,6 +6,7 @@ RUN pip install -U --no-cache-dir \
     pandas-profiling \
     cufflinks && \
     conda install --quiet --yes -c conda-forge \
+    nb_black \
     ipywidgets==7.4.2 \
     matplotlib \
     ipympl \
@@ -21,13 +22,13 @@ RUN pip install -U --no-cache-dir \
 
 # Arche dependencies
 # plotly deps https://github.com/plotly/plotly.py
-RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@75b63269a7f73bbca6055349c8ad3fae6a1713b7#egg=arche && \
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@76d923c5b7e1bad8d8f6e09a9a2fc517268d00b0#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38.1 --no-build && \
     jupyter labextension install plotlywidget@0.11.0 --no-build && \
     jupyter labextension install @jupyterlab/plotly-extension@0.18.2 --no-build && \
-    jupyter labextension install jupyter-matplotlib && \
+    jupyter labextension install jupyter-matplotlib --no-build && \
     jupyter lab build
 
 # Notebook extensions
