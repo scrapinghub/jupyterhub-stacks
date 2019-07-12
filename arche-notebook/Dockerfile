@@ -22,7 +22,7 @@ RUN pip install -U --no-cache-dir \
 
 # Arche dependencies
 # plotly deps https://github.com/plotly/plotly.py
-RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@76d923c5b7e1bad8d8f6e09a9a2fc517268d00b0#egg=arche && \
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@v0.3.6#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38.1 --no-build && \
