@@ -7,7 +7,7 @@ RUN pip install -U --no-cache-dir \
     cufflinks && \
     conda install --quiet --yes -c conda-forge \
     nb_black \
-    ipywidgets==7.4.2 \
+    ipywidgets \
     matplotlib \
     ipympl \
     awscli \
@@ -25,9 +25,9 @@ RUN pip install -U --no-cache-dir \
 RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@v0.3.6#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38.1 --no-build && \
-    jupyter labextension install plotlywidget@0.11.0 --no-build && \
-    jupyter labextension install @jupyterlab/plotly-extension@0.18.2 --no-build && \
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0.0 --no-build && \
+    jupyter labextension install plotlywidget@1.0.0 --no-build && \
+    jupyter labextension install jupyterlab-plotly@1.0.0 --no-build && \
     jupyter labextension install jupyter-matplotlib --no-build && \
     jupyter lab build
 
