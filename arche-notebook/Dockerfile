@@ -6,6 +6,7 @@ RUN pip install -U --no-cache-dir \
     pandas-profiling \
     cufflinks && \
     conda install --quiet --yes -c conda-forge \
+    plotly \
     nb_black \
     ipywidgets \
     matplotlib \
