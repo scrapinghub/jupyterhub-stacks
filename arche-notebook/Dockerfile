@@ -21,8 +21,8 @@ RUN pip install -U --no-cache-dir \
     jupyter serverextension enable --py nbgitpuller --sys-prefix
 
 # Arche dependencies
-# plotly deps https://github.com/plotly/plotly.py
-RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@v0.3.6#egg=arche && \
+# Plotly dependencies https://github.com/plotly/plotly.py
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@28897184e7b7676f9aae2f393e75b4c7485a3bb5#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0.0 --no-build && \
