@@ -15,19 +15,21 @@ RUN pip install -U --no-cache-dir \
     gcsfs \
     pyarrow \
     memory_profiler \
+    line_profiler \
     nb_conda_kernels && \
     conda clean -tipsy && \
     echo "envs_dirs:\n  - /home/jovyan/my-conda-envs/" > ~/.condarc
 
 # Arche dependencies
 # Plotly dependencies https://github.com/plotly/plotly.py
-RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@28897184e7b7676f9aae2f393e75b4c7485a3bb5#egg=arche && \
+RUN pip install -U --no-cache-dir git+https://github.com/scrapinghub/arche@476a9dd0634ba0602cb2624441054cbf3ff2f226#egg=arche && \
     conda install --quiet --yes jupyter_contrib_nbextensions && \
     conda clean -tipsy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0.0 --no-build && \
     jupyter labextension install plotlywidget@1.1.1 --no-build && \
     jupyter labextension install jupyterlab-plotly@1.1.2 --no-build && \
     jupyter labextension install jupyter-matplotlib --no-build && \
+    jupyter labextension install @jupyterlab/toc --no-build && \
     jupyter lab build
 
 # Notebook extensions
